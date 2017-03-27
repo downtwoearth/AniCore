@@ -1,0 +1,6 @@
+framework module Pods_AniCore {
+  umbrella header "Pods-AniCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
