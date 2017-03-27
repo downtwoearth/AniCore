@@ -18,7 +18,7 @@ class AniCoreAPISession: NSObject {
         AniCoreAPI.request(endpoint: EndPoints.ClientCred()) { (response) in
             switch response {
             case .success(let data):
-                print(data)
+                self.APIToken = AniCoreAPIToken.from(data as! NSDictionary)
                 break
             case .failure(let error):
                 print("AAHHHHH No client stuff : " + error.localizedDescription)
