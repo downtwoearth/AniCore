@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0E2C9A0C0959CDF9A045ACAA /* Pods_AniCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE70294CB752CE0CAD23A6 /* Pods_AniCore.framework */; };
-		5747F9BB1E893FD4009C01EC /* ACAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747F9BA1E893FD4009C01EC /* ACAPI.swift */; };
+		5743C2911E89AE2500D9412E /* AniCoreAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C2901E89AE2500D9412E /* AniCoreAPISession.swift */; };
+		5743C2931E89B43500D9412E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C2921E89B43500D9412E /* Constants.swift */; };
+		5747F9BB1E893FD4009C01EC /* AniCoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747F9BA1E893FD4009C01EC /* AniCoreAPI.swift */; };
 		575D03BE1E89473D004ED476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575D03BD1E89473D004ED476 /* GoogleService-Info.plist */; };
+		5767E8301E89B96D00B30B48 /* AniCoreAPIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767E82F1E89B96D00B30B48 /* AniCoreAPIToken.swift */; };
 		57B2DE961E892A5400C2C792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B2DE951E892A5400C2C792 /* AppDelegate.swift */; };
 		57B2DE981E892A5400C2C792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B2DE971E892A5400C2C792 /* ViewController.swift */; };
 		57B2DE9B1E892A5400C2C792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B2DE991E892A5400C2C792 /* Main.storyboard */; };
@@ -20,8 +23,11 @@
 /* Begin PBXFileReference section */
 		1BDE70294CB752CE0CAD23A6 /* Pods_AniCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AniCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BC04B1844C44CFB3A9AF01 /* Pods-AniCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniCore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniCore/Pods-AniCore.debug.xcconfig"; sourceTree = "<group>"; };
-		5747F9BA1E893FD4009C01EC /* ACAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACAPI.swift; sourceTree = "<group>"; };
+		5743C2901E89AE2500D9412E /* AniCoreAPISession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniCoreAPISession.swift; sourceTree = SOURCE_ROOT; };
+		5743C2921E89B43500D9412E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		5747F9BA1E893FD4009C01EC /* AniCoreAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniCoreAPI.swift; sourceTree = "<group>"; };
 		575D03BD1E89473D004ED476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5767E82F1E89B96D00B30B48 /* AniCoreAPIToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniCoreAPIToken.swift; sourceTree = SOURCE_ROOT; };
 		57B2DE921E892A5400C2C792 /* AniCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B2DE951E892A5400C2C792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B2DE971E892A5400C2C792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,9 @@
 		579D345E1E8948A90001826C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				57B2DE9E1E892A5400C2C792 /* LaunchScreen.storyboard */,
+				57B2DE991E892A5400C2C792 /* Main.storyboard */,
+				57B2DE971E892A5400C2C792 /* ViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -83,11 +92,11 @@
 				579D345E1E8948A90001826C /* Main */,
 				57B2DEA71E892BF000C2C792 /* Resources */,
 				57B2DE951E892A5400C2C792 /* AppDelegate.swift */,
-				57B2DE971E892A5400C2C792 /* ViewController.swift */,
-				57B2DE991E892A5400C2C792 /* Main.storyboard */,
-				57B2DE9E1E892A5400C2C792 /* LaunchScreen.storyboard */,
+				5743C2921E89B43500D9412E /* Constants.swift */,
+				5747F9BA1E893FD4009C01EC /* AniCoreAPI.swift */,
+				5743C2901E89AE2500D9412E /* AniCoreAPISession.swift */,
+				5767E82F1E89B96D00B30B48 /* AniCoreAPIToken.swift */,
 				57B2DEA11E892A5400C2C792 /* Info.plist */,
-				5747F9BA1E893FD4009C01EC /* ACAPI.swift */,
 				575D03BD1E89473D004ED476 /* GoogleService-Info.plist */,
 			);
 			path = AniCore;
@@ -244,7 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				57B2DE981E892A5400C2C792 /* ViewController.swift in Sources */,
-				5747F9BB1E893FD4009C01EC /* ACAPI.swift in Sources */,
+				5743C2911E89AE2500D9412E /* AniCoreAPISession.swift in Sources */,
+				5767E8301E89B96D00B30B48 /* AniCoreAPIToken.swift in Sources */,
+				5747F9BB1E893FD4009C01EC /* AniCoreAPI.swift in Sources */,
+				5743C2931E89B43500D9412E /* Constants.swift in Sources */,
 				57B2DE961E892A5400C2C792 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,4 +8,5 @@ target 'AniCore' do
   # Pods for AniCore
   pod ‘Alamofire’
 pod 'Firebase/Core'
+pod "ModelMapper"
 end
