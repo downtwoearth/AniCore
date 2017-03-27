@@ -54,14 +54,22 @@
 		57B2DE941E892A5400C2C792 /* AniCore */ = {
 			isa = PBXGroup;
 			children = (
+				57B2DEA71E892BF000C2C792 /* Resources */,
 				57B2DE951E892A5400C2C792 /* AppDelegate.swift */,
 				57B2DE971E892A5400C2C792 /* ViewController.swift */,
 				57B2DE991E892A5400C2C792 /* Main.storyboard */,
-				57B2DE9C1E892A5400C2C792 /* Assets.xcassets */,
 				57B2DE9E1E892A5400C2C792 /* LaunchScreen.storyboard */,
 				57B2DEA11E892A5400C2C792 /* Info.plist */,
 			);
 			path = AniCore;
+			sourceTree = "<group>";
+		};
+		57B2DEA71E892BF000C2C792 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57B2DE9C1E892A5400C2C792 /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
