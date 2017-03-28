@@ -18,6 +18,7 @@
 		57B2DE9B1E892A5400C2C792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B2DE991E892A5400C2C792 /* Main.storyboard */; };
 		57B2DE9D1E892A5400C2C792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B2DE9C1E892A5400C2C792 /* Assets.xcassets */; };
 		57B2DEA01E892A5400C2C792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B2DE9E1E892A5400C2C792 /* LaunchScreen.storyboard */; };
+		57CE07281E8A51DA0086013E /* AniCoreAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE07271E8A51DA0086013E /* AniCoreAPIRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		57B2DE9C1E892A5400C2C792 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B2DE9F1E892A5400C2C792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B2DEA11E892A5400C2C792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57CE07271E8A51DA0086013E /* AniCoreAPIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniCoreAPIRouter.swift; sourceTree = SOURCE_ROOT; };
 		7543624636989557F88090FF /* Pods-AniCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniCore.release.xcconfig"; path = "Pods/Target Support Files/Pods-AniCore/Pods-AniCore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				57B2DE951E892A5400C2C792 /* AppDelegate.swift */,
 				5743C2921E89B43500D9412E /* Constants.swift */,
 				5747F9BA1E893FD4009C01EC /* AniCoreAPI.swift */,
+				57CE07271E8A51DA0086013E /* AniCoreAPIRouter.swift */,
 				5743C2901E89AE2500D9412E /* AniCoreAPISession.swift */,
 				5767E82F1E89B96D00B30B48 /* AniCoreAPIToken.swift */,
 				57B2DEA11E892A5400C2C792 /* Info.plist */,
@@ -257,6 +260,7 @@
 				5767E8301E89B96D00B30B48 /* AniCoreAPIToken.swift in Sources */,
 				5747F9BB1E893FD4009C01EC /* AniCoreAPI.swift in Sources */,
 				5743C2931E89B43500D9412E /* Constants.swift in Sources */,
+				57CE07281E8A51DA0086013E /* AniCoreAPIRouter.swift in Sources */,
 				57B2DE961E892A5400C2C792 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

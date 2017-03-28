@@ -13,7 +13,7 @@ class AniCoreAPIToken: Mappable {
 
     var accessToken: String?
     var tokenType: String?
-    var expires: Int?
+    var expires: TimeInterval?
     var expiresIn: Int?
     var refreshToken: String?
     
@@ -24,6 +24,5 @@ class AniCoreAPIToken: Mappable {
         try expires = map.from("expires")
         try expiresIn = map.from("expires_in")
         try refreshToken = map.from("refresh_token")
-        print(self)
     } 
 }
