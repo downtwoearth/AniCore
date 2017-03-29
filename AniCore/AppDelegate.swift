@@ -19,7 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
-        AniCoreAPISession.sharedInstance.refreshClientToken()
+        AniCoreAPI.request(endpoint: seriesRouter.browseAnime([:])) { (response) in
+            switch response {
+            case .success(let data):
+                print(data)
+                break
+            case .failure(let Error):
+                print(Error)
+                break
+            }
+        }
         return true
     }
 

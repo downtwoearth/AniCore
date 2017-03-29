@@ -29,17 +29,17 @@ class AniCoreAPISession {
         }
     }
     
-    func refreshClientToken() {
+    func refreshClientToken(completionHandler: (AniCoreAPIToken?) -> Void) {
         guard let token = APIToken else {
             // We dont even have a token... what are you doing here.
             clientTokenRequest()
-            return
+            return completionHandler(APIToken)
         }
         
         // Just double check we actually have an expire field to work with
         guard let expires = token.expires else {
             clientTokenRequest()
-            return
+            return completionHandler(APIToken)
         }
         
         // Check if our token has expired yet, if it has request a new one, else just carry on
@@ -49,5 +49,7 @@ class AniCoreAPISession {
         if epochDate < now {
             clientTokenRequest()
         }
+        
+        completionHandler(APIToken)
     }
 }

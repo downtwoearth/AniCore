@@ -5,6 +5,8 @@
 //  Created by Kyle Brown on 28/03/2017.
 //  Copyright © 2017 Kyle Brown. All rights reserved.
 //
+//  All Client credential calls will happen here to AniList
+//
 
 import Foundation
 import Alamofire
