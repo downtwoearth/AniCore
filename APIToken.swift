@@ -9,7 +9,7 @@
 import Foundation
 import Mapper
 
-class AniCoreAPIToken: Mappable {
+struct AniCoreAPIToken: Mappable {
 
     var accessToken: String?
     var tokenType: String?
@@ -18,7 +18,7 @@ class AniCoreAPIToken: Mappable {
     var refreshToken: String?
     
     /// Define how your custom object is created from a Mapper object
-    required init(map: Mapper) throws {
+    init(map: Mapper) throws {
         try accessToken = map.from("access_token")
         try tokenType = map.from("token_type")
         try expires = map.from("expires")

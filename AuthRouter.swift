@@ -31,12 +31,12 @@ enum clientCredRouter: URLRequestConvertible {
     
     func asURLRequest() throws -> URLRequest {
         let url = URL(string: OAuthClient.OAuthURl)
-        let urlRequest = URLRequest(url: (url?.appendingPathComponent(path))!)
+        var urlRequest = URLRequest(url: (url?.appendingPathComponent(path))!)
+        urlRequest.httpMethod = self.method.rawValue
         
         switch self {
         case .clientCred(let params):
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: params)
         }
-
     }
 }

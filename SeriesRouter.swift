@@ -30,19 +30,25 @@ enum seriesRouter: URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         let url = URL(string: APIClient.APIUrl)
         var urlRequest = URLRequest(url: (url?.appendingPathComponent(path))!)
+        urlRequest.httpMethod = self.method.rawValue
         
-        AniCoreAPISession.sharedInstance.refreshClientToken() { (response) in
-            guard response != nil else {
-                print("Somehow this is still nil, so just show plain error")
-                return urlRequest
+        AniCoreAPISession.sharedInstance.refreshClientToken { (response) in
+            guard let token = response else {
+                print("We dont have an auth token, so cant do this call")
+                return
             }
             
             urlRequest.addValue("Bearer \(AniCoreAPISession.sharedInstance.APIToken)", forHTTPHeaderField: "Authorization")
             
             switch self {
             case .browseAnime(let params):
-                return try Alamofire.JSONEncoding.default.encode(urlRequest, with: params)
+                do {
+                    let _ = try Alamofire.JSONEncoding.default.encode(urlRequest, with: params)
+                } catch {
+                    print("EXPLOSIOS?!??!?!")
+                }
             }
         }
+        return urlRequest
     }
 }

@@ -13,7 +13,7 @@ enum APIError: Error {
     case objectSerialization(reason: String)
 }
 
-class AniCoreAPI {
+struct AniCoreAPI {
     
     public static func request(endpoint: URLRequestConvertible, completionHandler: @escaping (Result<Any>) -> Void) {
             Alamofire.request(endpoint).validate().responseJSON { (response) in
