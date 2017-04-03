@@ -9,5 +9,5 @@ target 'AniCore' do
   pod ‘Alamofire’
 pod 'Firebase/Core'
 pod "ModelMapper"
-pod "PromiseKit", "~> 4.0"
+pod "PromiseKit"
 end

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E2C9A0C0959CDF9A045ACAA /* Pods_AniCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE70294CB752CE0CAD23A6 /* Pods_AniCore.framework */; };
+		2925640079773588C250F1FB /* Pods_AniCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457E66A86A83A60DF3075D40 /* Pods_AniCore.framework */; };
 		5743C2911E89AE2500D9412E /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C2901E89AE2500D9412E /* APISession.swift */; };
 		5743C2931E89B43500D9412E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C2921E89B43500D9412E /* Constants.swift */; };
 		5747F9BB1E893FD4009C01EC /* AniCoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747F9BA1E893FD4009C01EC /* AniCoreAPI.swift */; };
@@ -23,8 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1BDE70294CB752CE0CAD23A6 /* Pods_AniCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AniCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		20BC04B1844C44CFB3A9AF01 /* Pods-AniCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniCore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniCore/Pods-AniCore.debug.xcconfig"; sourceTree = "<group>"; };
+		157FF4BCE1047C9F772EC895 /* Pods-AniCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniCore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniCore/Pods-AniCore.debug.xcconfig"; sourceTree = "<group>"; };
+		166975C1B113BD63A4E94BED /* Pods-AniCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniCore.release.xcconfig"; path = "Pods/Target Support Files/Pods-AniCore/Pods-AniCore.release.xcconfig"; sourceTree = "<group>"; };
+		457E66A86A83A60DF3075D40 /* Pods_AniCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AniCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5743C2901E89AE2500D9412E /* APISession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = SOURCE_ROOT; };
 		5743C2921E89B43500D9412E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		5747F9BA1E893FD4009C01EC /* AniCoreAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniCoreAPI.swift; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		57B2DEA11E892A5400C2C792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CE07271E8A51DA0086013E /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = SOURCE_ROOT; };
 		57CE07291E8AAB290086013E /* SeriesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesRouter.swift; sourceTree = SOURCE_ROOT; };
-		7543624636989557F88090FF /* Pods-AniCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniCore.release.xcconfig"; path = "Pods/Target Support Files/Pods-AniCore/Pods-AniCore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +47,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E2C9A0C0959CDF9A045ACAA /* Pods_AniCore.framework in Frameworks */,
+				2925640079773588C250F1FB /* Pods_AniCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F34AC30116470AE26E11462 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				157FF4BCE1047C9F772EC895 /* Pods-AniCore.debug.xcconfig */,
+				166975C1B113BD63A4E94BED /* Pods-AniCore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		579D345E1E8948A90001826C /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +85,8 @@
 			children = (
 				57B2DE941E892A5400C2C792 /* AniCore */,
 				57B2DE931E892A5400C2C792 /* Products */,
-				D8A93AC232774989EEE55F68 /* Pods */,
-				D0FF30FE21D2C677580465FF /* Frameworks */,
+				1F34AC30116470AE26E11462 /* Pods */,
+				A8F9DE95B383EDBFA9C50A47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,21 +125,12 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		D0FF30FE21D2C677580465FF /* Frameworks */ = {
+		A8F9DE95B383EDBFA9C50A47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BDE70294CB752CE0CAD23A6 /* Pods_AniCore.framework */,
+				457E66A86A83A60DF3075D40 /* Pods_AniCore.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D8A93AC232774989EEE55F68 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				20BC04B1844C44CFB3A9AF01 /* Pods-AniCore.debug.xcconfig */,
-				7543624636989557F88090FF /* Pods-AniCore.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,12 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57B2DEA41E892A5400C2C792 /* Build configuration list for PBXNativeTarget "AniCore" */;
 			buildPhases = (
-				E5C8B1FDE517269B8442A354 /* [CP] Check Pods Manifest.lock */,
+				09E7D2173821F2A6FDF29D15 /* [CP] Check Pods Manifest.lock */,
 				57B2DE8E1E892A5400C2C792 /* Sources */,
 				57B2DE8F1E892A5400C2C792 /* Frameworks */,
 				57B2DE901E892A5400C2C792 /* Resources */,
-				8C8ACA2AE4711586783E91C0 /* [CP] Embed Pods Frameworks */,
-				F06532C9B0321A825F416FE3 /* [CP] Copy Pods Resources */,
+				B2D27F21816C6FEF8E1CF6C0 /* [CP] Embed Pods Frameworks */,
+				26D9790F118E85AA03AE51F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,22 +206,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8C8ACA2AE4711586783E91C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AniCore/Pods-AniCore-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E5C8B1FDE517269B8442A354 /* [CP] Check Pods Manifest.lock */ = {
+		09E7D2173821F2A6FDF29D15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,7 +221,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F06532C9B0321A825F416FE3 /* [CP] Copy Pods Resources */ = {
+		26D9790F118E85AA03AE51F9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,6 +234,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AniCore/Pods-AniCore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2D27F21816C6FEF8E1CF6C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AniCore/Pods-AniCore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -384,7 +384,7 @@
 		};
 		57B2DEA51E892A5400C2C792 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20BC04B1844C44CFB3A9AF01 /* Pods-AniCore.debug.xcconfig */;
+			baseConfigurationReference = 157FF4BCE1047C9F772EC895 /* Pods-AniCore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V6AUB68JD4;
@@ -398,7 +398,7 @@
 		};
 		57B2DEA61E892A5400C2C792 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7543624636989557F88090FF /* Pods-AniCore.release.xcconfig */;
+			baseConfigurationReference = 166975C1B113BD63A4E94BED /* Pods-AniCore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V6AUB68JD4;

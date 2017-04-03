@@ -8,6 +8,12 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
+
+protocol router: URLRequestConvertible {
+    var method: HTTPMethod { get }
+    var path: String { get }
+}
 
 enum seriesRouter: URLRequestConvertible {
     
