@@ -18,6 +18,9 @@ PODS:
     - PromiseKit/Foundation (= 4.1.7)
     - PromiseKit/QuartzCore (= 4.1.7)
     - PromiseKit/UIKit (= 4.1.7)
+  - PromiseKit/Alamofire (4.1.7):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
   - PromiseKit/CorePromise (4.1.7)
   - PromiseKit/Foundation (4.1.7):
     - PromiseKit/CorePromise
@@ -31,6 +34,7 @@ DEPENDENCIES:
   - Firebase/Core
   - ModelMapper
   - PromiseKit
+  - PromiseKit/Alamofire (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -42,6 +46,6 @@ SPEC CHECKSUMS:
   ModelMapper: 3596a82f26c43491f6a8d3a00bcdba6ba0e62a93
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
 
-PODFILE CHECKSUM: 585b4f168ba8cbec19094528ae129f0691e40184
+PODFILE CHECKSUM: 208778698f21921015a75a371504b5c7b8f5220a
 
 COCOAPODS: 1.2.0.beta.1
