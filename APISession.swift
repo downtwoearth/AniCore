@@ -7,45 +7,55 @@
 //
 
 import Foundation
+import PromiseKit
+import Mapper
 
-class AniCoreAPISession {
+enum APIResult {
+    case success([String:Any])
+    case failure(String)
+}
+
+class APISession {
     
-    static let sharedInstance = AniCoreAPISession()
+    static let sharedInstance = APISession()
 
     var APIToken: AniCoreAPIToken?
 
-    func clientTokenRequest(completionHandler: @escaping (AniCoreAPIToken?) -> Void) {
-        let params: [String : Any] = ["grant_type" : "client_credentials", "client_id" :  OAuthClient.clientId as AnyObject, "client_secret" : OAuthClient.clientSecret]
-        AniCoreAPI.request(endpoint: clientCredRouter.clientCred(params)) { (response) in
-            switch response {
-            case .success(let data):
-                self.APIToken = AniCoreAPIToken.from(data as! NSDictionary)
-                break
-            case .failure(let error):
-                print("AAHHHHH No client stuff : " + error.localizedDescription)
-                self.APIToken = nil
-                break
+    public func clientTokenRequest() -> Promise<AniCoreAPIToken> {
+        return Promise { fulfill, reject in
+            // Check to see if we need to refresh/get a new token
+            if !refreshClientToken() {
+                fulfill(self.APIToken!)
+            }
+            
+            // Looks like we need to get a new token
+            let params: [String : Any] = ["grant_type" : "client_credentials", "client_id" : OAuthClient.clientId as AnyObject, "client_secret" : OAuthClient.clientSecret]
+            
+            AniCoreAPI.request(endpoint: clientCredRouter.clientCred(params)).then { token -> Void in
+                // Do something
+                print("Success, we have a token")
+                if let aniToken = AniCoreAPIToken.from(token as NSDictionary) {
+                    self.APIToken = aniToken
+                    fulfill(aniToken)
+                }
+                reject(APIError.apiError(reason: "Problem with Token json format"))
+            }.catch { error in
+                // We have a problem
+                print("An error getting token occured : " + error.localizedDescription)
+                reject(APIError.apiError(reason: error.localizedDescription))
             }
         }
     }
     
-    func refreshClientToken(completionHandler: @escaping (AniCoreAPIToken?) -> Void) {
+    func refreshClientToken() -> Bool {
         guard let token = APIToken else {
             // We dont even have a token... what are you doing here.
-            clientTokenRequest(completionHandler: { (response) in
-                print("coool")
-            })
-            completionHandler(APIToken)
-            return
+            return true
         }
         
         // Just double check we actually have an expire field to work with
         guard let expires = token.expires else {
-            clientTokenRequest(completionHandler: { (response) in
-                print("It didnt have an expire field")
-            })
-            completionHandler(APIToken)
-            return
+            return true
         }
         
         // Check if our token has expired yet, if it has request a new one, else just carry on
@@ -53,11 +63,28 @@ class AniCoreAPISession {
         let now = Date()
         
         if epochDate < now {
-            clientTokenRequest(completionHandler: { (response) in
-                print("The token had expired")
-            })
+            return true
         }
         
-        completionHandler(APIToken)
+        return false
+    }
+    
+    public func request(endpoint: URLRequestConvertible) -> Promise<Any> {
+        return Promise { fullfil, reject in
+            firstly {
+               clientTokenRequest()
+            }.then { token in
+                AniCoreAPI.request(endpoint: endpoint).then { response -> Void in
+                    // Do something
+                    fullfil(response)
+                }.catch { error in
+                    // We have a problem
+                    print("An error getting token occured : " + error.localizedDescription)
+                    reject(APIError.apiError(reason: error.localizedDescription))
+                }
+            }.catch { (error) in
+                reject(APIError.apiError(reason: error.localizedDescription))
+            }
+        }
     }
 }

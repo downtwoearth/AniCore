@@ -19,10 +19,10 @@ struct AniCoreAPIToken: Mappable {
     
     /// Define how your custom object is created from a Mapper object
     init(map: Mapper) throws {
-        try accessToken = map.from("access_token")
-        try tokenType = map.from("token_type")
-        try expires = map.from("expires")
-        try expiresIn = map.from("expires_in")
-        try refreshToken = map.from("refresh_token")
+        accessToken = map.optionalFrom("access_token")
+        tokenType = map.optionalFrom("token_type")
+        expires = map.optionalFrom("expires")
+        expiresIn = map.optionalFrom("expires_in")
+        refreshToken = map.optionalFrom("refresh_token")
     } 
 }

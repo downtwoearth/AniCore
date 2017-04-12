@@ -9,13 +9,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AniCoreAPISession.swift"
-            timestampString = "512571847.643896"
+            filePath = "APISession.swift"
+            timestampString = "513713971.41534"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "clientTokenRequest(completionHandler:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "clientTokenRequest()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AniCore.APISession.(clientTokenRequest () -&gt; PromiseKit.Promise&lt;AniCore.AniCoreAPIToken&gt;).(closure #1)"
+                  moduleName = "AniCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyle.brown/Documents/AniCore/APISession.swift"
+                  timestampString = "513716610.232232"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1733">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AniCore.APISession.(clientTokenRequest () -&gt; PromiseKit.Promise&lt;AniCore.AniCoreAPIToken&gt;).(closure #1).(closure #1)"
+                  moduleName = "AniCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyle.brown/Documents/AniCore/APISession.swift"
+                  timestampString = "513716610.235375"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "APISession.swift"
+            timestampString = "513713973.783037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "clientTokenRequest()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,30 +73,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AniCoreAPISession.swift"
-            timestampString = "512571922.527103"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "clientTokenRequest(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "APISession.swift"
-            timestampString = "512656757.652499"
+            timestampString = "513714781.814045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "refreshClientToken(completionHandler:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "request(endpoint:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AniCore.APISession.(request (endpoint : Alamofire.URLRequestConvertible) -&gt; PromiseKit.Promise&lt;Any&gt;).(closure #1).(closure #2)"
+                  moduleName = "AniCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyle.brown/Documents/AniCore/APISession.swift"
+                  timestampString = "513716610.242719"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AniCore.APISession.(request (endpoint : Alamofire.URLRequestConvertible) -&gt; PromiseKit.Promise&lt;Any&gt;).(closure #1).(closure #2).(closure #1)"
+                  moduleName = "AniCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyle.brown/Documents/AniCore/APISession.swift"
+                  timestampString = "513716610.244539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

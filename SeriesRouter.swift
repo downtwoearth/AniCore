@@ -38,13 +38,8 @@ enum seriesRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: (url?.appendingPathComponent(path))!)
         urlRequest.httpMethod = self.method.rawValue
         
-        AniCoreAPISession.sharedInstance.refreshClientToken { (response) in
-            guard let token = response else {
-                print("We dont have an auth token, so cant do this call")
-                return
-            }
-            
-            urlRequest.addValue("Bearer \(AniCoreAPISession.sharedInstance.APIToken)", forHTTPHeaderField: "Authorization")
+        if let token = APISession.sharedInstance.APIToken?.accessToken {
+            urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             
             switch self {
             case .browseAnime(let params):
@@ -55,6 +50,7 @@ enum seriesRouter: URLRequestConvertible {
                 }
             }
         }
+    
         return urlRequest
     }
 }

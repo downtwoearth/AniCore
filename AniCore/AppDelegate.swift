@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import PromiseKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,17 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FIRApp.configure()
-        
-        AniCoreAPI.request(endpoint: seriesRouter.browseAnime([:])) { (response) in
-            switch response {
-            case .success(let data):
-                print(data)
-                break
-            case .failure(let Error):
-                print(Error)
-                break
-            }
+
+        APISession.sharedInstance.request(endpoint: seriesRouter.browseAnime([:])).then { response in
+            print(response)
+        }.catch { (error) in
+            print(error.localizedDescription)
         }
         return true
     }
